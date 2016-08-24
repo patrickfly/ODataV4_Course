@@ -1,0 +1,9 @@
+/AirVinyl.API/bin
+/packages
+/AirVinyl.API/obj
+/AirVinyl.DataAccessLayer/bin
+/AirVinyl.DataAccessLayer/obj
+/AirVinyl.Model/bin
+/AirVinyl.Model/obj
+/AirVinyl.API/App_Data/AirVinyl.DataAccessLayer.AirVinylDbContext.mdf
+/AirVinyl.API/App_Data/AirVinyl.DataAccessLayer.AirVinylDbContext_log.ldf

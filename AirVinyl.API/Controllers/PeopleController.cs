@@ -7,6 +7,7 @@ using System.Web.OData;
 using System.Web.OData.Routing;
 using AirVinyl.API.Helpers;
 using AirVinyl.DataAccessLayer;
+using AirVinyl.Model;
 
 namespace AirVinyl.API.Controllers
 {
@@ -122,6 +123,20 @@ namespace AirVinyl.API.Controllers
             var collectionPropertyValue = person.GetValue(collectionPropertyToGet);
 
             return this.CreateOKHttpActionResult(collectionPropertyValue);
+        }
+
+
+        public IHttpActionResult Post(Person person)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            _ctx.People.Add(person);
+            _ctx.SaveChanges();
+
+            return Created(person);
         }
 
 
